@@ -1,0 +1,72 @@
+<app-header></app-header>
+
+ 
+<div class="container" style="padding-top: 85px;padding-bottom: 100px;">
+    <div class="row">
+        <div class="col-md-4 col-sm-6">
+            <div class="dashboard-box-docs">
+                <div class="dashboard-box-title proposal-docs">
+                    No. Of <br class="sm-break">Gold User
+                    <span class="curvemaker"></span>
+                </div>
+                <div class="dashboard-box-count">
+                    {{ GoldSubscribedUserCount }}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4  col-sm-6">
+            <div class="dashboard-box-docs">
+                <div class="dashboard-box-title solution-docs">
+                    No. Of <br class="sm-break">Platinum User
+                    <span class="curvemaker"></span>
+                </div>
+                <div class="dashboard-box-count ">
+                    {{ PlatinumSubscribedUserCount }}
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4  col-sm-6">
+            <div class="dashboard-box-docs">
+                <div class="dashboard-box-title ppt-docs">
+                    No. Of <br class="sm-break"> Lite User
+                    <span class="curvemaker"></span>
+                </div>
+                <div class="dashboard-box-count">
+                    {{ LiteSubscribedUserCount }}                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="search">Search with </label>
+        <select [(ngModel)]="SSId" (change)="onFilterChange()">
+        <option [value]=0>--All----</option>
+        <option [value]=1>Lite</option>
+        <option [value]=2>Platinum</option>
+        <option [value]=3>Gold</option>
+    </select>
+        <input type="text" id="SearchByText"  [(ngModel)]="searchData" (input)="onSearchChange()" placeholder="Enter Here">            
+    </div>
+    <table>    
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Subscription Status</th>
+            <th scope="col">IsActive</th>
+          </tr>
+        </thead>
+        <tbody>          
+          <tr *ngFor="let user of filteredUsers">
+            <td >{{ user.UserName }}</td>
+            <td>{{ user.Email }}</td>
+            <td>{{ user.SubscriptionStatus }}</td>
+            <td>{{ user.Status ? 'Active' : 'Not Active' }}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+<app-footer></app-footer>

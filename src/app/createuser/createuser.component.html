@@ -1,0 +1,64 @@
+<app-header></app-header>
+<div class="container" style="padding-top: 85px;">
+      <div class="row">
+        <div class="col-25">
+          <label for="UserName">Name</label>
+        </div>
+        <div class="col-75">
+          <input type="text"  name="UserName" [(ngModel)]="newuser.UserName" placeholder="Your name..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="Password">Password</label>
+        </div>
+        <div class="col-75">
+          <input type="text"  name="Password" [(ngModel)]="newuser.Password" placeholder="Your Password..">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="Email">Email</label>
+        </div>
+        <div class="col-75">
+          <input type="text" name="Email" [(ngModel)]="newuser.Email" placeholder="Email">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="Contactnumber">Contact Number</label>
+        </div>
+        <div class="col-75">
+            <input type="text" name="Contactnumber"  [(ngModel)]="newuser.Contactnumber" placeholder="Number">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="plan">Plan</label>
+        </div>
+        <div class="col-75">
+          <select  name="SubscriptionStatusid" [(ngModel)]="newuser.SubscriptionStatusid">
+            <option value="1">Lite</option>
+            <option value="2">Platinum</option>
+            <option value="3">Gold</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-25">
+          <label for="plan">Status</label>
+        </div>
+        <div class="col-75">
+          <select [(ngModel)]="newuser.Status" name="status">
+            <option value="1">Active</option>
+            <option value="2">Non Active</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <input type="submit" (click)="SaveUser()" value="Submit">
+      </div>
+  </div>
+  
+<app-footer></app-footer>

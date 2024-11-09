@@ -1,0 +1,38 @@
+<app-header></app-header>
+<div class="container" style="padding-top: 85px;">
+    <div class="row">
+        <div class="col-25">
+            <label for="name">Name</label>
+        </div>
+        <div class="col-75">
+            <label> {{ LoggedUser.UserName }}</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+            <label for="Email">Email</label>
+        </div>
+        <div class="col-75">
+            <label> {{ LoggedUser.Email }}</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+            <label for="contact">Contact Number</label>
+        </div>
+        <div class="col-75">
+            <label> +{{ LoggedUser.Contactnumber }}</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+            <label for="contact">Subscription</label>
+        </div>
+        <div class="col-75">
+            <label> {{ LoggedUser.SubscriptionStatus }}</label>
+        </div>
+    </div>
+
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,15 @@
+<div class="login-page">
+    <div class="form">
+      <form class="login-form">
+        <select [(ngModel)]="logincredentials.UserTypeId" [ngModelOptions]="{standalone: true}" required>
+          <option [value]="0" disabled selected>Select User Type</option> 
+          <option [value]=1>Admin</option>
+          <option [value]=2>User</option>
+        </select>
+        <input type="text" [(ngModel)]="logincredentials.Email" [ngModelOptions]="{standalone: true}" placeholder="EmailAddress Is Your Username" required/>
+        <input type="password" [(ngModel)]="logincredentials.Password" [ngModelOptions]="{standalone: true}" placeholder="password" required/>
+        <button type="submit" (click)="loginclick()">login</button>
+        <p>Did You Want to create an new Account? <a (click)="OpenRegisterPage()">Click Here</a></p>
+      </form>
+    </div>
+  </div>

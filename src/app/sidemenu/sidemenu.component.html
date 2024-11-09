@@ -1,0 +1,9 @@
+<div class="sidemenubar" >  
+    <ul>
+        <li><button (click)="OpenDashboard()" *ngIf="LoggedUser.UserID !== 0">Dashboard</button></li>
+        <li><button (click)="GotoMyProfilePage()" *ngIf="LoggedUser.UserID !== 0">My Profile</button></li>
+        <li><button (click)="GotoCreateNewUserPage()" *ngIf="LoggedUser.UserTypeID !== 2 && LoggedUser.UserID !== 0">Create User</button></li>
+        <li><button (click)="GotoLoginPage()">Logout</button></li>
+    </ul>
+  </div>
+  
