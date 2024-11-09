@@ -1,0 +1,44 @@
+Task 2: Frontend Dashboard 
+
+- Build a simple user dashboard with dummy data (username, email, subscription status). 
+
+- Requirements:
+
+  - Use any frontend framework (React, Angular, or Vue). 
+
+  - Include basic navigation and a search bar to filter user information. 
+
+  - Optional: Use a CSS framework (Bootstrap, Tailwind) for styling. 
+
+
+Angular CLI: 17.3.11
+Node: 22.11.0 
+Package Manager: npm 10.9.0
+OS: win32 x6
+
+Reference :  
+https://material.angular.io/components
+StackOverflow
+https://www.w3schools.com/
+
+New Project Named : userapp// ng new userapp// 
+ng add @angular/material  //install materials for animations
+npm install bootstrap  //Bootsrap install
+ng generate service user // user service created for saving/hardcoding user data
+
+Working:
+Two User Type 
+1-Admin
+2-User
+Credential for Admin
+-user name : Afsal@gmail.com
+-Password  : Afsal
+Credential for User
+-user name : Shammas@gmail.com
+-Password  : Shammas
+
+only Admin can add new user by default newly adding all user type will be 2
+Three levels of Subscription : Lite,Platinum,Gold
+All newly adding users data saved in localstorage.when click on logout button it will clear.
+
+
